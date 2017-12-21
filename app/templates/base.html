@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Papers</title>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header class = "navbar navbar-inverse">
+        <div class = "container-fluid">
+            <div class = "navbar-header">
+                {% if header_title %}
+                    <span class = "navbar-brand"><a href = "#">Papers</a>/{{ header_title }}</span>
+                {% else %}
+                    <a class = "navbar-brand" href = "#">Papers</a>
+                {% endif %}
+            </div>
+            <ul class = "nav navbar-nav navbar-right">
+                <li><a href = "#">Request a paper</a></li>
+            </ul>
+            {% block header_content %}{% endblock %}
+        </div>
+    </header>
+    {% block main_content %}{% endblock %}
+    <footer class = "page-footer black">
+        <div class = "container-fluid">
+            <div class = "row">
+                <div class = "col-sm-4">
+                    <h4 class = "title">Aim</h4><br />
+                    <p>We aim to provide all the end semester papers together at one place. You will find almost all
+                    papers here. If you could not find any paper you can request it <a href = "#">here</a>.</p>
+                </div>
+                <div class = "col-sm-2"></div>
+                <div class = "col-sm-3">
+                    <h4 class = "title">Question Papers</h4><br />
+                    <a href = "#">F.Y.B.Tech.</a><br />
+                    <a href = "#">S.Y.B.Tech.</a><br />
+                    <a href = "#">T.Y.B.Tech.</a><br />
+                    <a href = "#">B.Tech.</a><br />
+                </div>
+                <div class = "col-sm-3">
+                    <h4 class = "title">Navigation</h4><br />
+                    <a href = "#">Contact Us <span class = "glyphicon glyphicon-envelope"></span></a><br />
+                    <a href = "https://www.coep.org.in">Back to main site <span
+                            class="glyphicon glyphicon-education"></span
+                        ></a><br />
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class = "footer-copyright">
+            <div class = "container-fluid text-center">
+                Developed by <b><a href = "http://www.coep.org.in/webteam">COEP Webteam <span
+                    class="glyphicon glyphicon-globe"></span></a></b>
+            </div>
+        </div>
+        {% block footer_content %}{% endblock %}
+    </footer>
+
+</body>
+</html>
