@@ -3,12 +3,12 @@ A website developed to provide COEP's End Semester Examination Papers all in one
 
 # Installation
 You need python3 virtual environment to use this site. install_venv.sh will install virtual environment named flask for you.You need to change it's permissions before executing it by following command: <br />
-    chmod +x install_venv.sh <br />
+  <code>  chmod +x install_venv.sh </code><br />
 Run the shell script by following command: <br />
-    sudo ./install_venv.sh  <br />
+  <code>  sudo ./install_venv.sh  </code><br />
 
 # Using this site
-Type following commands to run this app:
-    source flask/bin/activate <br />
-    python run.py <br />
+Type following commands to run this app: <br />
+  <code>  source flask/bin/activate  </code><br />
+  <code>  python run.py </code><br />
 The console will show logs for successful starting of server. Open your browser and type 'localhost:5000' in the address bar to open the site.
