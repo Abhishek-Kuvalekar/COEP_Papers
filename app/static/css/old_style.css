@@ -1,0 +1,28 @@
+footer{
+    background: black;
+    color: grey;
+}
+
+body {
+    background: lightgreen;
+}
+
+.row {
+    margin-bottom: 30px;
+}
+
+#header_title {
+    color: grey;
+}
+
+.panel-internal-links {
+    color: white;
+}
+
+.panel-internal-links:hover {
+    color: black;
+}
+
+#pageheader {
+    color: grey;
+}

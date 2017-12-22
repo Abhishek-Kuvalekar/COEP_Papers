@@ -1,0 +1,53 @@
+footer{
+    background-color: #0c2047;
+    color: #dee0e5;
+}
+
+body {
+    background: #ccd9ff;
+}
+
+.row {
+    margin-bottom: 30px;
+}
+
+#header_title {
+    color: #dee0e5;
+}
+
+.panel-internal-links {
+    color: #dee0e5;
+}
+
+.panel-internal-links:hover {
+    color: grey;
+}
+
+.panel-heading {
+	background-color: #0c2047 !important;
+}
+
+.panel {
+	border: 1px solid #0c2047;
+}
+
+.navbar .container-fluid{
+	background-color: #0c2047;
+	color: #dee0e5;
+}
+
+#navbrand, #requestlink{
+    color: #dee0e5;
+}
+
+#navbrand:hover, #requestlink:hover {
+    color: grey;
+}
+
+.navbar-header {
+	color: #dee0e5;
+}
+
+#developer {
+    padding-bottom: 15px;
+}
