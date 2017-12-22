@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
+    <meta name = "author" content= "Abhishek Kuvalekar">
+
     {% if title %}
         <title>{{ title }}</title>
     {% else %}
         <title>Papers</title>
     {% endif %}
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
 </head>
 <body>
+
     <header class = "navbar navbar-inverse">
         <div class = "container-fluid">
             <div class = "navbar-header">
-                {% if header_title %}
-                    <span class = "navbar-brand"><a href = "#">Papers</a>/{{ header_title }}</span>
-                {% else %}
-                    <a class = "navbar-brand" href = "#">Papers</a>
-                {% endif %}
+                <a class = "navbar-brand" href = "#" id = "navbrand">Papers</a>
             </div>
             <ul class = "nav navbar-nav navbar-right">
-                <li><a href = "#">Request a paper</a></li>
+                <li><a href = "#" id = "requestlink">Request a Paper</a></li>
             </ul>
-            {% block header_content %}{% endblock %}
         </div>
+        <!--<hr />
+        <div class = "container-fluid">
+            {% block header_content %}
+                {% if header_title %}
+                    <div class = "page-header text-center" id = "pageheader">
+                        <h3>{{ header_title }}</h3>
+                    </div>
+                {% endif %}
+            {% endblock %}
+        </div>-->
     </header>
-    {% block main_content %}{% endblock %}
+
+    <div class = "container-fluid">
+        {% block main_content %}{% endblock %}
+    </div>
+
     <footer class = "page-footer black">
         <div class = "container-fluid">
             <div class = "row">
@@ -57,12 +72,11 @@
         </div>
         <hr />
         <div class = "footer-copyright">
-            <div class = "container-fluid text-center">
+            <div class = "container-fluid text-center" id = "developer">
                 Developed by <b><a href = "http://www.coep.org.in/webteam">COEP Webteam <span
-                    class="glyphicon glyphicon-globe"></span></a></b>
+                        class="glyphicon glyphicon-globe"></span></a></b>
             </div>
         </div>
-        {% block footer_content %}{% endblock %}
     </footer>
 
 </body>
