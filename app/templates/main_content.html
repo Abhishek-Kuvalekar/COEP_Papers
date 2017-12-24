@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block main_content %}
+    <div class = "container-fluid">
+        {% for childList in contentDict["contentList"] %}
+            <div class = "row">
+                {% if (childList|length == 2) %}
+                    <div class = "col-sm-1"></div>
+                    <div class = "col-sm-4 panel panel-primary">
+                        <div class = "panel-body text-center"><img src = "/static/img/{{ childList[0] }}.jpeg" alt = "{{ childList[0] }}" longdesc = "An icon for {{ childList[0] }}." width = "300px" height = "150px" style = "border: thin solid black"></div>
+                        <div class = "panel-heading text-center">
+                            {% if contentDict["isMore"] == True %}
+                                <a href = "{{ url_for('giveContent', grade = contentDict['grade'], branch = childList[0]) }}" class = "panel-internal-links">{{ childList[0] }}</a>
+                            {% else %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class = "col-sm-2"></div>
+                    <div class = "col-sm-4 panel panel-primary">
+                        <div class = "panel-body text-center"><img src = "/static/img/{{ childList[1] }}.jpeg" alt = "{{ childList[1] }}" longdesc = "An icon for {{ childList[1] }}." width = "300px" height = "150px" style = "border: thin solid black"></div>
+                        <div class = "panel-heading text-center">
+                            {% if contentDict["isMore"] == True %}
+                                <a href = "{{ url_for('giveContent', grade = contentDict['grade'], branch = childList[1]) }}" class = "panel-internal-links">{{ childList[1] }}</a>
+                            {% else %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class = "col-sm-1"></div>
+                {% else %}
+                    <div class = "col-sm-4"></div>
+                    <div class = "col-sm-4 panel panel-primary">
+                        <div class = "panel-body text-center"><img src = "/static/img/{{ childList[0] }}.jpeg" alt = "{{ childList[0] }}" longdesc = "An icon for {{ childList[0] }}." width = "300px" height = "150px" style = "border: thin solid black"></div>
+                        <div class = "panel-heading text-center">
+                            {% if contentDict["isMore"] == True %}
+                                <a href = "{{ url_for('giveContent', grade = contentDict['grade'], branch = childList[0]) }}" class = "panel-internal-links">{{ childList[0] }}</a>
+                            {% else %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class = "col-sm-4"></div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
