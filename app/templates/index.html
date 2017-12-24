@@ -7,7 +7,7 @@
                     "An icon for single user signifying first year." width = "200px" height = "100px">
             </div>
             <div class = "panel-heading text-center">
-                <a href = "#" class = "panel-internal-links">F.Y.B.Tech.</a>
+                <a href = "{{ url_for('giveContent', grade = 'FY') }}" class = "panel-internal-links">F.Y.B.Tech.</a>
             </div>
         </div>
         <div class = "col-sm-2"></div>
@@ -15,7 +15,7 @@
             <div class = "panel-body text-center"><img src = "../static/img/sy.jpeg" alt = "S.Y.B.Tech." longdesc =
                     "An icon for two users signifying second year." width = "200px" height = "100px"></div>
             <div class = "panel-heading text-center">
-                <a href = "#" class = "panel-internal-links">S.Y.B.Tech.</a>
+                <a href = "{{ url_for('giveContent', grade = 'SY') }}" class = "panel-internal-links">S.Y.B.Tech.</a>
             </div>
         </div>
         <div class = "col-sm-2"></div>
@@ -24,10 +24,10 @@
     <div class = "row">
         <div class = "col-sm-2"></div>
         <div class = "col-sm-3 panel panel-primary">
-            <div class = "panel-body text-center"><img src = "../static/img/ty.png" alt = "T.Y.B.Tech." longdesc =
+            <div class = "panel-body text-center"><img src = "../static/img/ty.jpeg" alt = "T.Y.B.Tech." longdesc =
                     "An icon for three users signifying third year." width = "200px" height = "100px"></div>
             <div class = "panel-heading text-center">
-                <a href = "#" class = "panel-internal-links">T.Y.B.Tech.</a>
+                <a href = "{{ url_for('giveContent', grade = 'TY') }}" class = "panel-internal-links">T.Y.B.Tech.</a>
             </div>
         </div>
         <div class = "col-sm-2"></div>
@@ -35,7 +35,7 @@
             <div class = "panel-body text-center"><img src = "../static/img/btech.jpeg" alt = "B.Tech." longdesc =
                     "An icon for four users signifying fourth year." width = "200px" height = "100px"></div>
             <div class = "panel-heading text-center">
-                <a href = "#" class = "panel-internal-links">B.Tech.</a>
+                <a href = "{{ url_for('giveContent', grade = 'BTech') }}" class = "panel-internal-links">B.Tech.</a>
             </div>
         </div>
         <div class = "col-sm-2"></div>

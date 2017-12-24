@@ -8,11 +8,8 @@ body {
 }
 
 .row {
-    margin-bottom: 30px;
-}
-
-#header_title {
-    color: #dee0e5;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .panel-internal-links {

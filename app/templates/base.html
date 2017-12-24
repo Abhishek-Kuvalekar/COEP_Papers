@@ -8,14 +8,14 @@
     {% if title %}
         <title>{{ title }}</title>
     {% else %}
-        <title>Papers</title>
+        <title>COEP Papers</title>
     {% endif %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 
 </head>
 <body>
@@ -23,22 +23,13 @@
     <header class = "navbar navbar-inverse">
         <div class = "container-fluid">
             <div class = "navbar-header">
-                <a class = "navbar-brand" href = "#" id = "navbrand">Papers</a>
+                <a class = "navbar-brand" href = "{{ url_for('index') }}" id = "navbrand">Papers</a>
             </div>
             <ul class = "nav navbar-nav navbar-right">
-                <li><a href = "#" id = "requestlink">Request a Paper</a></li>
+                <li><a href = "#" id = "requestlink">Request a
+                    Paper</a></li>
             </ul>
         </div>
-        <!--<hr />
-        <div class = "container-fluid">
-            {% block header_content %}
-                {% if header_title %}
-                    <div class = "page-header text-center" id = "pageheader">
-                        <h3>{{ header_title }}</h3>
-                    </div>
-                {% endif %}
-            {% endblock %}
-        </div>-->
     </header>
 
     <div class = "container-fluid">
@@ -56,10 +47,10 @@
                 <div class = "col-sm-2"></div>
                 <div class = "col-sm-3">
                     <h4 class = "title">Question Papers</h4><br />
-                    <a href = "#">F.Y.B.Tech.</a><br />
-                    <a href = "#">S.Y.B.Tech.</a><br />
-                    <a href = "#">T.Y.B.Tech.</a><br />
-                    <a href = "#">B.Tech.</a><br />
+                    <a href = "{{ url_for('giveContent', grade = 'FY') }}">F.Y.B.Tech.</a><br />
+                    <a href = "{{ url_for('giveContent', grade = 'SY') }}">S.Y.B.Tech.</a><br />
+                    <a href = "{{ url_for('giveContent', grade = 'TY') }}">T.Y.B.Tech.</a><br />
+                    <a href = "{{ url_for('giveContent', grade = 'BTech') }}">B.Tech.</a><br />
                 </div>
                 <div class = "col-sm-3">
                     <h4 class = "title">Navigation</h4><br />
