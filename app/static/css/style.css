@@ -1,6 +1,7 @@
 footer{
     background-color: #0c2047;
     color: #dee0e5;
+    margin-top: 25px;
 }
 
 body {
@@ -47,4 +48,20 @@ body {
 
 #developer {
     padding-bottom: 15px;
+}
+
+.table-bordered td, .table-bordered th, .table {
+    border: thin solid black !important;
+    background: white !important;
+    color: black !important;
+}
+
+.table-bordered th {
+    background: darkred !important;
+    color: #dee0e5 !important;
+}
+
+.table {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }

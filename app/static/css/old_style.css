@@ -1,28 +1,60 @@
 footer{
-    background: black;
-    color: grey;
+    background-color: #021708;
+    color: #dee0e5;
+    margin-top: 25px;
 }
 
 body {
-    background: lightgreen;
+    background: #15E64D;
 }
 
 .row {
-    margin-bottom: 30px;
-}
-
-#header_title {
-    color: grey;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .panel-internal-links {
-    color: white;
+    color: #dee0e5;
 }
 
 .panel-internal-links:hover {
-    color: black;
+    color: grey;
 }
 
-#pageheader {
+.panel-heading {
+	background-color: #021708 !important;
+}
+
+.panel {
+	border: 1px solid #021708;
+}
+
+.navbar .container-fluid{
+	background-color: #021708;
+	color: #dee0e5;
+}
+
+#navbrand, #requestlink{
+    color: #dee0e5;
+}
+
+#navbrand:hover, #requestlink:hover {
     color: grey;
+}
+
+.navbar-header {
+	color: #dee0e5;
+}
+
+#developer {
+    padding-bottom: 15px;
+}
+
+.table-bordered td, .table-bordered th, .table {
+    border: thin solid black !important;
+}
+
+.table {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
