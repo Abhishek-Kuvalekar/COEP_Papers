@@ -14,3 +14,4 @@ pip install flask-babel
 pip install guess_language
 pip install flipflop
 pip install coverage
+tar -zxvf app/static/papers.tar.gz -C app/static
