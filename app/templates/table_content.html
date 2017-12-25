@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block main_content %}
+    <div class = "container-fluid">
+        <div class = "col-sm-3"></div>
+        <div class = "col-sm-6">
+        <table class = "table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class = "text-center bg-primary">Sr. No</th>
+                    <th class = "text-center bg-primary">Papers</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(0, contentDict["contentList"] | length) %}
+                    <tr>
+                        <td class = "text-center bg-muted">{{ i + 1 }}</td>
+                        {% if(contentDict["subfolder"] == None) %}
+                            {% if (contentDict["subject"] == None) %}
+                                <td class = "text-center bg-muted"><a href = "/static/papers/{{ contentDict['grade'] }}/{{ contentDict['branch'] }}/{{ contentDict['contentList'][i] }}">{{ contentDict["contentList"][i] }}</a></td>
+                            {% else %}
+                                <td class = "text-center bg-muted"><a href = "/static/papers/{{ contentDict['grade'] }}/{{ contentDict['branch'] }}/{{ contentDict['subject'] }}/{{ contentDict['contentList'][i] }}">{{ contentDict["contentList"][i] }}</a></td>
+                            {% endif %}
+                        {% else %}
+                            <td class = "text-center bg-muted"><a href = "/static/papers/{{ contentDict['grade'] }}/{{ contentDict['branch'] }}/{{ contentDict['subject'] }}/{{ contentDict['subfolder'] }}/{{ contentDict['contentList'][i] }}">{{ contentDict["contentList"][i] }}</a></td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <div class = "col-sm-3"></div>
+    </div>
+{% endblock %}
