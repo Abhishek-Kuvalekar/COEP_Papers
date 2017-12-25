@@ -15,3 +15,5 @@ pip install guess_language
 pip install flipflop
 pip install coverage
 tar -zxvf app/static/papers.tar.gz -C app/static
+mv app/static/app/static/papers app/static
+rm -r app/static/app
